@@ -1,0 +1,7 @@
+apache:
+  rocketmq:
+    consumer:
+      PushConsumer: PushConsumer
+    producer:
+      producerGroup: Producer
+    namesrvAddr: 116.207.129.119:9876

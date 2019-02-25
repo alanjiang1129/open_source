@@ -10,6 +10,7 @@ Vue.use(Router)
 import Layout from '../views/layout/Layout'
 
 import Test from '../views/test/test'
+import RocketmqFunList from '../views/rocketmq/RocketmqFunList'
 
 /**
 * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -42,7 +43,18 @@ export const constantRouterMap = [
   {
     path: '/test',
     name: 'test',
-    component: Test
+    component: Layout
+  },
+  {
+    path: '/rocketmq',
+    component: Layout,
+    redirect: '/rocketmq/rocketmqFunList',
+    name: 'rocketmq',
+    children: [{
+      path: 'rocketmqFunList',
+      name: 'rocketmqFunList',
+      component: RocketmqFunList
+    }]
   },
   {
     path: '/example',

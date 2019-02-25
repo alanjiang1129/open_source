@@ -5,20 +5,26 @@
 </template>
 
 <script>
-  export default {
-    name: "Test",
-    data() {
-      return {
-        test:''
+export default {
+  name: 'Login',
+  data() {
+    return {
+      loginForm: {
+        username: 'admin',
+        password: 'admin'
       }
-    },
-    mounted: function () {
-
-    },
-    methods:{
-
+    }
+  },
+  methods: {
+    showPwd() {
+      if (this.pwdType === 'password') {
+        this.pwdType = ''
+      } else {
+        this.pwdType = 'password'
+      }
     }
   }
+}
 </script>
 
 <style scoped>
