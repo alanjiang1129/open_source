@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/alanjiang1129/config
+          search-paths: yml_configs
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8060/eureka/
+server:
+  port: 8070
