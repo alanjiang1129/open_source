@@ -1,7 +1,11 @@
 spring:
   application:
     name: db
+  profiles:
+    active: dev
   cloud:
     config:
+      fail-fast: true
       uri: http://localhost:8070/
-      profile:
+      label: master
+      profile: dev,mysql-dev,redis-dev
